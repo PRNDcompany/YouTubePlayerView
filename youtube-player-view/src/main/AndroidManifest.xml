@@ -1,2 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="kr.co.prnd.youtubeplayerandroidxfragment" />
+    package="kr.co.prnd.youtubeplayerandroidxfragment">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>
