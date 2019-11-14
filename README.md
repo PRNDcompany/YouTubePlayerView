@@ -42,7 +42,7 @@ youtubePlayerFragment.initialize(...)
 ```gradle
 dependencies {
     implementation 'kr.co.prnd:youtube-player-view:x.x.x'
-    //implementation 'kr.co.prnd:youtube-player-view:1.0.0'    
+    //implementation 'kr.co.prnd:youtube-player-view:1.1.0'    
 }
 
 ```
