@@ -1,17 +1,23 @@
  
 # What is YouTubePlayerView?
-- [Youtube Player API](https://developers.google.com/youtube/android/player/) is too old version
+- [YouTube Player API](https://developers.google.com/youtube/android/player/) is too old version
 <br>: Never updated from 2015/10/12
-- There are 3 problems with [Youtube Player API](https://developers.google.com/youtube/android/player/) library.
+- There are 3 problems with [YouTube Player API](https://developers.google.com/youtube/android/player/) library.
 
 ## Problem 1 - Jar File
 - We should use [Jar library file](https://developers.google.com/youtube/android/player/downloads/YouTubeAndroidPlayerApi-1.2.2.zip), not like `implementation xxxx`
 - That is old way and it makes difficult to manage the library
 
 ## Problem 2 - Fragment style
-- If you want youtube player with another view, you have to use `YouTubePlayerFragment`
+- If you want YouTube player with another view, you have to use `YouTubePlayerFragment`
 (Or you have to extend `YouTubeBaseActivity`)
 <br><br><img src="https://github.com/PRNDcompany/YouTubePlayerView/blob/master/arts/youtube_dialog.png" width="250"><br>
+```xml
+<FrameLayout
+    android:id="@+id/youtube_player_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+```
 ```kotlin
 val youtubePlayerFragment = YouTubePlayerSupportFragment()
 fragmentManager.beginTransaction()
@@ -28,7 +34,7 @@ youtubePlayerFragment.initialize(...)
 <br>: [YoutubeAndroidPlayerAPI error after migrating to AndroidX in Android Studio](https://stackoverflow.com/questions/56798955/youtubeandroidplayerapi-error-after-migrating-to-androidx-in-android-studio)
 
 
-# YouTubePlayerView is super easy Youtube Player View
+# YouTubePlayerView is super easy YouTube Player View
         
 ## Setup
 ### Gradle
