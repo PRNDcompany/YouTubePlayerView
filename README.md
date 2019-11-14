@@ -12,6 +12,12 @@
 - If you want YouTube player with another view, you have to use `YouTubePlayerFragment`
 (Or you have to extend `YouTubeBaseActivity`)
 <br><br><img src="https://github.com/PRNDcompany/YouTubePlayerView/blob/master/arts/youtube_dialog.png" width="250"><br>
+```xml
+<FrameLayout
+    android:id="@+id/youtube_player_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+```
 ```kotlin
 val youtubePlayerFragment = YouTubePlayerSupportFragment()
 fragmentManager.beginTransaction()
