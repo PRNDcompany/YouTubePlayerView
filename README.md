@@ -42,7 +42,7 @@ youtubePlayerFragment.initialize(...)
 ```gradle
 dependencies {
     implementation 'kr.co.prnd:youtube-player-view:x.x.x'
-    //implementation 'kr.co.prnd:youtube-player-view:1.1.0'    
+    //implementation 'kr.co.prnd:youtube-player-view:1.3.0'    
 }
 
 ```
@@ -59,7 +59,7 @@ If you think this library is useful, please press star button at upside.
 ### XML style
 ```xml
  <kr.co.prnd.YouTubePlayerView
-    android:id="@+id/you_tube_player_fragment_view"
+    android:id="@+id/you_tube_player_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:videoId="VIDEO_ID" />
@@ -68,7 +68,7 @@ If you think this library is useful, please press star button at upside.
 ### Dynamic code style
 ```xml
 <kr.co.prnd.YouTubePlayerView
-    android:id="@+id/you_tube_player_fragment_view"
+    android:id="@+id/you_tube_player_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
 ```
@@ -76,6 +76,17 @@ If you think this library is useful, please press star button at upside.
 val youTubePlayerView:YouTubePlayerView = findViewById(R.id.you_tube_player_fragment_view)
 youTubePlayerView.play(VIDEO_ID)
 ```
+
+### Fragment
+- If you want use this `YouTubePlayerView` in fragment, you have to use `fragment` attribute in xml
+```xml
+<kr.co.prnd.YouTubePlayerView
+    android:id="@+id/you_tube_player_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:fragment="com.example.youtubeplayerview.Sample2Fragment" />
+```
+
 
 ## FAQ
 ### - Why don't you need a developer key?
