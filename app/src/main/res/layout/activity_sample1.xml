@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <kr.co.prnd.YouTubePlayerView
+        android:id="@+id/you_tube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--
+
+        <kr.co.prnd.YouTubePlayerView
+            android:id="@+id/you_tube_player_fragment_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:videoId="m2SZ6RV_J7I" />
+    -->
+
+</LinearLayout>

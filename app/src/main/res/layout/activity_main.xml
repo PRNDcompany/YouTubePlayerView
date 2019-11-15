@@ -4,17 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <kr.co.prnd.YouTubePlayerView
-        android:id="@+id/you_tube_player_fragment_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <!--
+    <Button
+        android:id="@+id/btn_sample1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity Style" />
 
-        <kr.co.prnd.YouTubePlayerView
-            android:id="@+id/you_tube_player_fragment_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:videoId="m2SZ6RV_J7I" />
-    -->
 
+    <Button
+        android:id="@+id/btn_sample2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment Style" />
 </LinearLayout>

@@ -1,8 +1,9 @@
 package com.example.youtubeplayerview
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import kr.co.prnd.YouTubePlayerView
 
 class MainActivity : AppCompatActivity() {
 
@@ -10,11 +11,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val youTubePlayerView = findViewById<YouTubePlayerView>(R.id.you_tube_player_fragment_view)
-        youTubePlayerView.play(VIDEO_ID)
+        findViewById<Button>(R.id.btn_sample1).setOnClickListener {
+            startActivity(Intent(this, Sample1Activity::class.java))
+        }
+
+        findViewById<Button>(R.id.btn_sample2).setOnClickListener {
+            startActivity(Intent(this, Sample2Activity::class.java))
+        }
+
     }
 
-    companion object {
-        private const val VIDEO_ID = "m2SZ6RV_J7I"
-    }
 }
