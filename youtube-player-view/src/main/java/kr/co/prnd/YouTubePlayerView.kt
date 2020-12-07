@@ -76,7 +76,7 @@ class YouTubePlayerView @JvmOverloads constructor(
     }
 
 
-    fun play(videoId: String, listener: OnInitializedListener? = null) {
+    fun play(videoId: String, autoStart: Boolean = false, listener: OnInitializedListener? = null) {
         listener?.let { this.onInitializedListener = it }
 
         youTubePlayerAndroidxFragment.initialize(
@@ -88,7 +88,46 @@ class YouTubePlayerView @JvmOverloads constructor(
                     wasRestored: Boolean
                 ) {
                     if (!wasRestored) {
-                        player.cueVideo(videoId)
+                        if (autoStart) {
+                            player.loadVideo(videoId)
+                        } else {
+                            player.cueVideo(videoId)
+                        }
+                    }
+
+                    onInitializedListener?.onInitializationSuccess(provider, player, wasRestored)
+                }
+
+                override fun onInitializationFailure(
+                    provider: YouTubePlayer.Provider,
+                    result: YouTubeInitializationResult
+                ) {
+                    onInitializedListener?.onInitializationFailure(provider, result)
+                }
+            })
+    }
+
+    fun playList(
+        playlistId: String,
+        autoStart: Boolean = false,
+        listener: OnInitializedListener? = null
+    ) {
+        listener?.let { this.onInitializedListener = it }
+
+        youTubePlayerAndroidxFragment.initialize(
+            javaClass.simpleName,
+            object : YouTubePlayer.OnInitializedListener {
+                override fun onInitializationSuccess(
+                    provider: YouTubePlayer.Provider,
+                    player: YouTubePlayer,
+                    wasRestored: Boolean
+                ) {
+                    if (!wasRestored) {
+                        if (autoStart) {
+                            player.loadPlaylist(playlistId)
+                        } else {
+                            player.cuePlaylist(playlistId)
+                        }
                     }
 
                     onInitializedListener?.onInitializationSuccess(provider, player, wasRestored)
