@@ -38,7 +38,7 @@ youtubePlayerFragment.initialize(...)
         
 ## Setup
 ### Gradle
-[ ![Download](https://api.bintray.com/packages/prnd/maven/youtube-player-view/images/download.svg) ](https://bintray.com/prnd/maven/youtube-player-view/_latestVersion)
+[![Maven Central](https://img.shields.io/maven-central/v/kr.co.prnd/youtube-player-view.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22kr.co.prnd%22%20AND%20a:%youtube-player-view%22)
 ```gradle
 dependencies {
     implementation 'kr.co.prnd:youtube-player-view:x.x.x'
