@@ -86,6 +86,17 @@ youTubePlayerView.play(VIDEO_ID)
     android:layout_height="wrap_content"
     app:fragment="com.example.youtubeplayerview.Sample2Fragment" />
 ```
+
+### Package visibility 
+Add the below lines of code into your AndroidManifest.xml file
+```
+<queries>
+   <intent>
+      <action android:name="com.google.android.youtube.api.service.START" />
+   </intent>
+</queries>
+```
+
 - If you use Proguard, you have to add your fragment class name in your `proguard-rules.pro` file
 ```
 -keepnames class com.example.youtubeplayerview.Sample2Fragment
