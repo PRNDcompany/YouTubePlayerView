@@ -1,4 +1,10 @@
- 
+# YouTubePlayerView (Deprecated)
+
+⚠️ **Deprecation Notice
+
+Please note that the [YouTube Android Player API](https://developers.google.com/youtube/android/player) has been deprecated and is no longer recommended for use. As a result, YouTubePlayerView will also be deprecated.
+Instead, you can migrate to the [YouTube IFrame Player API](https://developers.google.com/youtube/iframe_api_reference).
+
 # What is YouTubePlayerView?
 - [YouTube Player API](https://developers.google.com/youtube/android/player/) is too old version
 <br>: Never updated from 2015/10/12
